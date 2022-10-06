@@ -34,7 +34,7 @@ body {
 
 table{
     padding: .5em;
-    margin:auto;
+    margin: 25px auto;
     width: 30%;
     margin-bottom : .5em;
     table-layout: fixed;
@@ -52,6 +52,7 @@ table{
     font-size: 20px;
     color: #71606a;
     display: inline-block;
+    position: absolute;
   }
   
   #words ul {
