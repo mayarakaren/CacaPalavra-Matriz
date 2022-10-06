@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <title>Caça Palavras</title>
+</head>
+<body>
+
+    <section class="page-header">
+        <h1 class="project-name">Caça Palavras - Redes Sociais</h1>
+        <h2 class="project-tagline">Jogo de Caça palavras.</h2>
+      </section>
+
+      <div id ="words">
+      <ul>
+        <li> Snapchat</li>
+        <li> Whatsapp </li>
+        <li> Instagram </li>
+        <li> Facebook </li>
+        <li> Mensseger </li>
+        <li> YouTube </li>
+        <li> Linkedin </li>
+        <li> Pinterest </li>
+        <li> Tik Tok </li>
+        <li> Twitter </li>
+      </ul>
+    </div>
+
+    <script>
+
+           matriz =  new Array;
+
+
+           colorir = new Array;
+
+           colorir = [
+           [0,0,1,0,0,0,0,0,0,0,0,1],
+           [1,1,1,1,1,1,1,1,0,1,0,1],
+           [0,0,1,1,0,0,1,0,0,1,0,1],
+           [1,0,1,1,0,0,1,1,0,1,0,1],
+           [1,0,1,1,0,0,1,1,0,1,0,1],
+           [1,0,1,1,0,0,1,1,0,1,0,1],
+           [1,0,1,1,0,0,1,1,0,1,0,1],
+           [1,0,1,1,0,0,1,1,0,1,0,1],
+           [1,0,0,0,0,0,1,1,0,1,0,1],
+           [0,0,0,0,0,0,1,1,0,0,0,0],
+           [0,0,0,0,0,0,0,0,0,0,0,0],
+           [0,1,1,1,1,1,1,1,1,0,0,0],
+           [1,1,1,1,1,1,1,1,1,0,0,0]];
+
+            //Criando a matriz
+           matriz = [
+           ["A","B","F","Z","S","X","M","L","M","J","A","M"],
+           ["W","H","A","T","S","A","P","P","S","L","L","E"],
+           ["B","C","C","W","Q","S","I","F","R","I","C","S"],
+           ["T","R","E","I","U","P","N","Y","J","N","S","S"],
+           ["I","J","B","T","D","Ç","T","O","W","K","D","E"],
+           ["K","L","O","T","V","L","E","U","Z","E","V","N"],
+           ["T","K","O","E","A","J","R","T","X","D","E","G"],
+           ["O","E","K","R","C","K","E","U","J","I","T","E"],
+           ["K","W","P","D","G","J","S","B","K","N","N","R"],
+           ["V","M","T","F","T","A","T","E","Q","V","A","L"],
+           ["Ç","X","Y","H","F","R","N","H","U","X","V","W"],
+           ["X","S","N","A","P","C","H","A","T","W","R","U"],
+           ["I","N","S","T","A","G","R","A","M","U","T","O"]];
+
+           //Lendo a matriz
+
+            document.write("<table align= 'center'>");
+
+           for(linha=0; linha<13; linha++){
+
+                document.write("<tr>");
+
+                for(coluna=0; coluna<12; coluna++){
+                    document.write("<td id='"+ linha.toString() + '-'+ coluna.toString() +"'>" + matriz[linha][coluna] + "</td>");
+
+                    //Pintando as palavras
+
+                    if(colorir[linha][coluna]==1){
+                        document.getElementById(linha.toString() + '-' + coluna.toString()).style.background = '#BA55D3';
+                    } 
+                }
+           }    
+
+                document.write("</tr>");
+            
+           document.write("</table>");
+    </script>
+
+
+</body>
+</html>
